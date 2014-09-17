@@ -51,6 +51,11 @@ body {
   list-style-type: none;
 }
 
+@-webkit-keyframes chart__item, chart__label, chart__bar {
+   0% { -webkit-transform: scaleY(1,0); color: #EBE7E7; background: rgba(127, 219, 255, 0.6) }
+   100% { -webkit-transform: scaleY(1,0); color: #FFFFFF; background: rgba(255,255,255,0.6) }
+}
+
 .chart__item {
   float: left;
   height: 16em;
@@ -59,6 +64,15 @@ body {
   width: 7.3%;
 
   background-color: rgba(204, 204, 204, 0);
+}
+
+.chart__item:hover{
+	-webkit-animation-name: chart__item, chart__label, chart__bar;
+	-webkit-animation-duration: 1s;
+	-webkit-animation-timing-function: ease; /* ease is the default */
+    -webkit-animation-delay: 0;             /* 0 is the default */
+    -webkit-animation-iteration-count: 1;    /* 1 is the default */
+    -webkit-animation-direction: normal;  /* normal is the default */
 }
 
 .chart__link,
@@ -70,6 +84,11 @@ body {
   text-decoration: none;
 }
 
+@-webkit-keyframes chart__label {
+   from { color: #EBE7E7 }
+   to { color: #FFFFFF }
+}
+
 .chart__label {
   bottom: -1.7em;
   position: absolute;
@@ -78,10 +97,25 @@ body {
   text-align: center;
 }
 
+.chart__label:hover {
+	/*background-color: rgba(255,255,255,0.6);*/
+	-webkit-animation-name: chart__label;
+	-webkit-animation-duration: 1s;
+	-webkit-animation-timing-function: ease-in-out; /* ease is the default */
+    -webkit-animation-delay: 0;             /* 0 is the default */
+    -webkit-animation-iteration-count: 1;    /* 1 is the default */
+    -webkit-animation-direction: normal;  /* normal is the default */
+}
+
 .chart__bar-wrap {
   bottom: 0;
   position: absolute;
   width: 100%;
+}
+
+@-webkit-keyframes chart__bar {
+   from { background: rgba(127, 219, 255, 0.6) }
+   to { background: rgba(255,255,255,0.6) }
 }
 
 .chart__bar {
@@ -93,6 +127,17 @@ body {
 
   background-color: rgba(127, 219, 255, 0.6);
 }
+
+.chart__bar:hover {
+	/*background-color: rgba(255,255,255,0.6);*/
+	-webkit-animation-name: chart__bar;
+	-webkit-animation-duration: 1s;
+	-webkit-animation-timing-function: ease-in-out; /* ease is the default */
+    -webkit-animation-delay: 0;             /* 0 is the default */
+    -webkit-animation-iteration-count: 1;    /* 1 is the default */
+    -webkit-animation-direction: normal;  /* normal is the default */
+}
+
 
 .chart__count {
   display: inline-block;

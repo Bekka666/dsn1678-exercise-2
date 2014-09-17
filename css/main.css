@@ -5,7 +5,7 @@ html {
   background-color: #6b6e80;
   box-sizing: border-box;
 
-  color: #fff;
+  color: #EBE7E7;
   font: normal 100%/1.5 sans-serif;
 }
 
@@ -52,8 +52,8 @@ body {
 }
 
 @-webkit-keyframes chart__item, chart__label, chart__bar {
-   0% { -webkit-transform: scaleY(1,0); color: #EBE7E7; background: rgba(127, 219, 255, 0.6) }
-   100% { -webkit-transform: scaleY(1,0); color: #FFFFFF; background: rgba(255,255,255,0.6) }
+   0% { -webkit-transform: scaleY(1,0); color: #EBE7E7; background: rgba(127, 219, 255, 0.6); }
+   100% { -webkit-transform: scaleY(1,0); color: #FFFFFF; background: rgba(255,255,255,0.6); }
 }
 
 .chart__item {
@@ -114,8 +114,8 @@ body {
 }
 
 @-webkit-keyframes chart__bar {
-   from { background: rgba(127, 219, 255, 0.6) }
-   to { background: rgba(255,255,255,0.6) }
+   0% { background: rgba(127, 219, 255, 0.6); }
+   100% { background: rgba(255,255,255,0.7); }
 }
 
 .chart__bar {
@@ -126,6 +126,7 @@ body {
   top: 0;
 
   background-color: rgba(127, 219, 255, 0.6);
+  
 }
 
 .chart__bar:hover {

@@ -94,6 +94,10 @@ body {
   width: 100%;
 }
 
+@-webkit-keyframes chart__bar {
+   0% { top:100%; }
+   100% { top:0; }
+}
 
 .chart__bar {
   bottom: 0;
@@ -104,6 +108,7 @@ body {
 
   background-color: rgba(127, 219, 255, 0.6);
   transition: background-color 1000ms linear, color 1000ms linear;
+  -webkit-animation: chart__bar 500ms ease 0 1 alternate;
   
 }
 
@@ -127,8 +132,9 @@ body {
   opacity: 0;
 
   text-align: center;
-  transition: all 1000ms linear;
+  transition: all 500ms linear;
 }
+
 
 .chart__item:hover .chart__count {
 	top: -4em;

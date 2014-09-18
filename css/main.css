@@ -51,10 +51,6 @@ body {
   list-style-type: none;
 }
 
-@-webkit-keyframes chart__item, chart__label, chart__bar {
-   0% { -webkit-transform: scaleY(1,0); color: #EBE7E7; background: rgba(127, 219, 255, 0.6); }
-   100% { -webkit-transform: scaleY(1,0); color: #FFFFFF; background: rgba(255,255,255,0.6); }
-}
 
 .chart__item {
   float: left;
@@ -67,12 +63,7 @@ body {
 }
 
 .chart__item:hover{
-	-webkit-animation-name: chart__item, chart__label, chart__bar;
-	-webkit-animation-duration: 1s;
-	-webkit-animation-timing-function: ease; /* ease is the default */
-    -webkit-animation-delay: 0;             /* 0 is the default */
-    -webkit-animation-iteration-count: 1;    /* 1 is the default */
-    -webkit-animation-direction: normal;  /* normal is the default */
+	height: ;
 }
 
 .chart__link,
@@ -84,10 +75,6 @@ body {
   text-decoration: none;
 }
 
-@-webkit-keyframes chart__label {
-   from { color: #EBE7E7 }
-   to { color: #FFFFFF }
-}
 
 .chart__label {
   bottom: -1.7em;
@@ -98,13 +85,7 @@ body {
 }
 
 .chart__label:hover {
-	/*background-color: rgba(255,255,255,0.6);*/
-	-webkit-animation-name: chart__label;
-	-webkit-animation-duration: 1s;
-	-webkit-animation-timing-function: ease-in-out; /* ease is the default */
-    -webkit-animation-delay: 0;             /* 0 is the default */
-    -webkit-animation-iteration-count: 1;    /* 1 is the default */
-    -webkit-animation-direction: normal;  /* normal is the default */
+	color: white;
 }
 
 .chart__bar-wrap {
@@ -113,10 +94,6 @@ body {
   width: 100%;
 }
 
-@-webkit-keyframes chart__bar {
-   0% { background: rgba(127, 219, 255, 0.6); }
-   100% { background: rgba(255,255,255,0.7); }
-}
 
 .chart__bar {
   bottom: 0;
@@ -126,17 +103,12 @@ body {
   top: 0;
 
   background-color: rgba(127, 219, 255, 0.6);
+  transition: background-color 1000ms linear, color 1000ms linear;
   
 }
 
 .chart__bar:hover {
-	/*background-color: rgba(255,255,255,0.6);*/
-	-webkit-animation-name: chart__bar;
-	-webkit-animation-duration: 1s;
-	-webkit-animation-timing-function: ease-in-out; /* ease is the default */
-    -webkit-animation-delay: 0;             /* 0 is the default */
-    -webkit-animation-iteration-count: 1;    /* 1 is the default */
-    -webkit-animation-direction: normal;  /* normal is the default */
+	background-color: rgba(255,255,255,0.6);
 }
 
 

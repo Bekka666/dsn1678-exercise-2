@@ -63,7 +63,7 @@ body {
 }
 
 .chart__item:hover{
-	height: ;
+	background-color: rgba(204, 204, 204, .6);
 }
 
 .chart__link,
